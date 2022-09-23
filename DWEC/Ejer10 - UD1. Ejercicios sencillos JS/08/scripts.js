@@ -18,10 +18,19 @@ const esMayor = (... numbers) => {
 
 submit.addEventListener('click', (event) => {
     event.preventDefault();
-    if(Number(formulario.n1.value) && Number(formulario.n2.value) && Number(formulario.n3.value)) {
-        alert("el número mayor es " + esMayor(formulario.n1.value, formulario.n2.value, formulario.n3.value));
+    console.log(formulario)
+    const n1 = Number(formulario.n1.value);
+    const n2 = Number(formulario.n2.value);
+    const n3 = Number(formulario.n3.value);
+    console.log(n1 + " " + n2 + " " + n3);
+
+    if(!isNaN(n1) && !isNaN(n2) && !isNaN(n3)) {
+        alert("el número mayor es " + esMayor(n1, n2, n3));
     }
 })
+
+
+
 
 
 
